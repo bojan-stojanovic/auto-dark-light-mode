@@ -1,0 +1,49 @@
+/* Light Color Scheme */
+:root,
+:root[data-force-color-mode="light"] {
+    color-scheme: light dark;
+    --text-color: #000;
+    --background-color: #fff;
+}
+
+/* Dark Color Scheme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #fff;
+        --background-color: #333;
+    }
+}
+
+:root[data-force-color-mode="dark"] {
+    --text-color: #fff;
+    --background-color: #333;
+}
+
+/* Use the Color Scheme */
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: all .3s;
+}
+
+/* Only show reset button if override is set */
+#reset-darkmode {
+    display: none;
+    text-decoration: none;
+    font-style: italic;
+}
+
+[data-force-color-mode] #reset-darkmode {
+    display: initial;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

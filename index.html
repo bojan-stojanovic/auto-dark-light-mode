@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- check must be set before css loads and other scripts -->
+    <script src="./js/dark-mode-check.js"></script>
+    <script src="./js/dark-mode-switch.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Dark mode</title>
+</head>
+
+<body>
+    <h1>Dark Mode + Override (Vanilla JS) <button id="reset-darkmode" title="Clear Dark Mode Override">(reset)</button>
+    </h1>
+    <div>
+        <input type="checkbox" id="toggle-darkmode" data-toggle-darkmode />
+        <label for="toggle-darkmode"><span>Toggle Light/Dark Mode</span></label>
+    </div>
+    <aside>
+        <p>Some things to try:</p>
+        <ol>
+            <li>Change your system preferences. This site will adjust accordingly <em>(if no override is set)</em></li>
+            <li>Click the checkbox to override the system preferences</li>
+            <li>Use this reset link at the top to clear the override <em>(shown only if an override is set)</em></li>
+        </ol>
+    </aside>
+</body>
+
+</html>
